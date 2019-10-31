@@ -1,0 +1,15 @@
+Symbol: Zero Size: 12 Character: C
+123456789012
+
+CCCCCCCCCCCC
+C         CC
+C        C C
+C       C  C
+C      C   C
+C     C    C
+C    C     C
+C   C      C
+C  C       C
+C C        C
+CC         C
+CCCCCCCCCCCC

@@ -1,0 +1,14 @@
+Symbol: Zero Size: 11 Character: B
+12345678901
+
+BBBBBBBBBBB
+B        BB
+B       B B
+B      B  B
+B     B   B
+B    B    B
+B   B     B
+B  B      B
+B B       B
+BB        B
+BBBBBBBBBBB
