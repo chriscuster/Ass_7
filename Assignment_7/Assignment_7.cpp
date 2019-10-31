@@ -187,7 +187,7 @@ int main(int argc, char* argv[])
 		if (shape == "upArrow")
 		{
 			printUpArrow(size, letter);
-			cout << output.str();
+			fout << output.str();
 		}
 
 		if (shape == "rightArrow")
