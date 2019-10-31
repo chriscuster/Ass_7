@@ -70,30 +70,59 @@ void printZero(int size, char letter)
 
 void printUpArrow(int size, char letter)
 {
-	int height = 0;
+	int height = 1;
 	stringstream outputChars;
 
 	//makes the size even if its odd
-	if (size %2 != 0)
+	if (size % 2 != 0)
 	{
 		size++;
 	}
-	while ( height < size)
+	while (height <= size)
 	{
 		//if the height is the upper half create the arrow
 		if (height <= size / 2)
-
-		//if height is the bottom half create the base shape
-		if (height <= size - (size / 2))
 		{
-			outputChars << letter;
-			outputChars << letter;
-			//outputChars << "";
+			int spaces = size - (2 * height);
+			// spaces before
+			int  i = 0;
+			while (i < spaces / 2) {
+				outputChars << ' ';
+				i++;
+			}
+			i = 0;
+			// chars after
+			while (i < size - spaces)
+			{
+				outputChars << letter;
+				i++;
+			}
+
+			while (i < spaces / 2) {
+				outputChars << ' ';
+				i++;
+			}
+			outputChars << endl;
 		}
 		else
 		{
-			outputChars << " ";
+			int i = 0;
+			// base
+			while (i < (size - 2) / 2)
+			{
+				outputChars << ' ';
+				i++;
+			}
+			i = 0;
+
+			while (i < 2)
+			{
+				outputChars << letter;
+				i++;
+			}
+			outputChars << endl;
 		}
+
 		height++;
 	}
 	output << endl << endl << outputChars.str();
@@ -158,7 +187,7 @@ int main(int argc, char* argv[])
 		if (shape == "upArrow")
 		{
 			printUpArrow(size, letter);
-			fout << output.str();
+			cout << output.str();
 		}
 
 		if (shape == "rightArrow")
@@ -167,7 +196,7 @@ int main(int argc, char* argv[])
 		}
 		fout.close();
 		output.str("");
-		
+
 		//cout << "Shape Created: " << shape << endl;
 
 	}
