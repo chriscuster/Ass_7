@@ -1,35 +1,5 @@
 
-
-upArrow 3 *
-upArrow 4 *
-upArrow 5 5
-upArrow 6 6
-upArrow 11 B
-upArrow 12 C
-upArrow 25 ^
-upArrow 100 %
-upArrow 101 @
-
-
-rightArrow 3 5
-rightArrow 4 5
-rightArrow 5 5
-rightArrow 6 6
-rightArrow 11 B
-rightArrow 12 C
-rightArrow 25 >
-rightArrow 100 %
-rightArrow 101 @
-
-
-zero 5 5
-zero 6 6
-zero 11 B
-zero 12 C
-zero 25 0
-zero 100 %
-zero 101 @
-
+rightArrow 6 X
 
 
 

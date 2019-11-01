@@ -130,12 +130,76 @@ void printUpArrow(int size, char letter)
 
 void printRightArrow(int size, char letter)
 {
+	stringstream outputChars;
+
+	int height = 1;
+	int i = 0;
 	//makes the size even if its odd
 	if (size % 2 != 0)
 	{
 		size++;
 	}
+	int halfSize = (size / 2);
 
+	//creates the upper half of the right arrow
+	do
+	{
+		// top part
+		if (height < size / 2)
+		{
+			i = 0;
+			// put number of spaces 1/2 the size
+			do
+			{
+				output << ' ';
+				i++;
+
+			} while (i < halfSize);
+
+			// now put number of letters which is height
+			i = 0;
+			do
+			{
+				output << letter;
+				i++;
+			} while (i < height);
+		}
+		// middle
+		else if (height == size / 2 || height == size / 2 + 1)
+		{
+			i = 1;
+			do
+			{
+				output << letter;
+				i++;
+			} while (i <= size);
+		}
+		// lower
+		else
+		{
+			i = 1;
+			do
+			{
+				output << ' ';
+				i++;
+
+			} while (i <= halfSize);
+
+			i = size - height + 1;
+
+			do
+			{
+				output << letter;
+				i--;
+			} while (i > 0);
+		}
+
+		output << endl;
+		height++;
+	} while (height <= size);
+
+
+	output << endl << endl << outputChars.str();
 
 }
 
@@ -192,7 +256,8 @@ int main(int argc, char* argv[])
 
 		if (shape == "rightArrow")
 		{
-			cout << endl;
+			printRightArrow(size, letter);
+			cout << output.str();
 		}
 		fout.close();
 		output.str("");
